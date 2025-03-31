@@ -1,0 +1,17 @@
+{
+  "name": "slonick",
+  "version": "1.0.0",
+  "description": "SloNick - Ретро приложение в стиле 90-х",
+  "main": "server/app.js",
+  "scripts": {
+    "start": "node server/app.js",
+    "dev": "nodemon server/app.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "ws": "^8.16.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+} 

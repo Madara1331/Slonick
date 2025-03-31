@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SloNick - Ретро 90-х</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div id="language-modal" class="language-modal">
+        <div class="language-modal-content">
+            <h2 class="cyber-title">言語を選択してください</h2>
+            <p class="retro-text">Выберите язык интерфейса</p>
+            <div class="language-buttons">
+                <button class="language-btn japanese" data-lang="ja">
+                    <span class="btn-icon">日本語</span>
+                    <span class="btn-text">Японский</span>
+                </button>
+                <button class="language-btn russian" data-lang="ru">
+                    <span class="btn-icon">РУС</span>
+                    <span class="btn-text">Русский</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="noise-overlay"></div>
+    <div class="scan-lines"></div>
+    <div class="crt-effect"></div>
+    
+    <header class="glitch-header">
+        <div class="neon-logo">
+            <span class="logo-text">SloNick</span>
+            <div class="logo-glow"></div>
+        </div>
+        <nav>
+            <ul class="cyberpunk-menu">
+                <li><a href="#home" class="glitch-text">ホーム</a></li>
+                <li><a href="#about" class="glitch-text">概要</a></li>
+                <li><a href="#download" class="glitch-text">ダウンロード</a></li>
+                <li><a href="#developers" class="glitch-text">開発者</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="audio-player">
+        <button id="toggle-music" class="toggle-music-btn">
+            <i class="fas fa-play"></i>
+        </button>
+        <div class="track-info">
+            <span id="track-title">Government Hooker - ecentral, TOM! C</span>
+        </div>
+        <audio id="bg-music" preload="auto" loop>
+            <source src="ecentral, TOM! C — Government Hooker (www.lightaudio.ru).mp3" type="audio/mp3">
+        </audio>
+    </div>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="vhs-filter">
+                <div class="hero-content">
+                    <h1 class="cyber-title">スロニック</h1>
+                    <p class="retro-text">90年代の東京の雰囲気に浸ってください</p>
+                    <div class="cta-container">
+                        <a href="#download" class="neon-button pulse">Скачать приложение</a>
+                        <div class="button-glow"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="cityscape-bg"></div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="section-container">
+                <h2 class="section-title glitch-text">О приложении</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>SloNick - это уникальное приложение, которое перенесет вас в атмосферу Японии 90-х годов. Погрузитесь в эстетику киберпанка, аниме и ретро-компьютеров.</p>
+                        <p>Особенности приложения:</p>
+                        <ul class="cyber-list">
+                            <li>Футуристический интерфейс в стиле аниме</li>
+                            <li>Ретро-звуковые эффекты и анимации</li>
+                            <li>Полная адаптивность для всех устройств</li>
+                            <li>Оригинальный саундтрек в стиле синтвейв</li>
+                        </ul>
+                    </div>
+                    <div class="app-preview">
+                        <div class="screen-container">
+                            <div class="screen-frame">
+                                <div class="screen-content">
+                                    <img src="img/backgrounds/1.png" alt="Скриншот приложения">
+                                </div>
+                            </div>
+                            <div class="reflection"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="download" class="download-section">
+            <div class="section-container">
+                <h2 class="section-title glitch-text">Скачать приложение</h2>
+                <div class="download-counter">
+                    <span class="counter-icon"><i class="fas fa-download"></i></span>
+                    <span class="counter-text">Скачиваний:</span>
+                    <span class="counter-number" id="download-count">0</span>
+                </div>
+                <div class="app-card">
+                    <div class="app-icon">
+                        <img src="img/avatars/trans_bg(1).png" alt="SloNick иконка">
+                    </div>
+                    <div class="app-info">
+                        <h3 class="app-title">SloNick v2.0</h3>
+                        <p class="app-description">Окунитесь в атмосферу Японии 90-х годов с нашим приложением. Доступно для Windows, macOS и Linux.</p>
+                        <div class="download-buttons">
+                            <a href="assets/downloads/Win.zip" class="download-btn">
+                                <span class="btn-icon">Win</span>
+                                <span class="btn-text">Windows x64</span>
+                            </a>
+                            <!-- <a href="assets/downloads/SloNick-mac.zip" class="download-btn">
+                                <span class="btn-icon">Mac</span>
+                                <span class="btn-text">macOS</span>
+                            </a>
+                            <a href="assets/downloads/SloNick-linux.zip" class="download-btn">
+                                <span class="btn-icon">Lin</span>
+                                <span class="btn-text">Linux</span>
+                            </a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="system-requirements">
+                    <h4>Системные требования:</h4>
+                    <div class="requirements-grid">
+                        <div class="requirement-item">
+                            <span class="requirement-label">OS:</span>
+                            <span class="requirement-value">Windows 10/11</span>  <!--, macOS 10.15+, Ubuntu 20.04+-->
+                        </div>
+                        <div class="requirement-item">
+                            <span class="requirement-label">Процессор:</span>
+                            <span class="requirement-value">Intel Core i3 или аналог</span>
+                        </div>
+                        <div class="requirement-item">
+                            <span class="requirement-label">Память:</span>
+                            <span class="requirement-value">4 GB RAM</span>
+                        </div>
+                        <div class="requirement-item">
+                            <span class="requirement-label">Хранилище:</span>
+                            <span class="requirement-value">306 MB свободного места</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="developers" class="developers-section">
+            <div class="section-container">
+                <h2 class="section-title glitch-text">Команда разработчиков</h2>
+                <div class="developers-grid">
+                    <div class="developer-card">
+                        <div class="dev-avatar">
+                            <img src="img/avatars/1.jpg" alt="Разработчик 1">
+                            <div class="avatar-glitch"></div>
+                        </div>
+                        <div class="dev-info">
+                            <h3 class="dev-name">Скопенков Артём</h3>
+                            <p class="dev-role">Ведущий разработчик</p>
+                            <p class="dev-bio">Специалист по UI/UX и анимации с 8-летним опытом в разработке интерфейсов в ретро-стиле.</p>
+                            <div class="dev-socials">
+                                <a href="https://discord.gg/BQ5MPYJ3jY" class="social-link">Discord - 13madara31</a>
+                                <!-- <a href="#" class="social-link">Telegram</a> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="developer-card">
+                        <div class="dev-avatar">
+                            <img src="img/avatars/2.jpg" alt="Разработчик 2">
+                            <div class="avatar-glitch"></div>
+                        </div>
+                        <div class="dev-info">
+                            <h3 class="dev-name">Бейдук Алексей</h3>
+                            <p class="dev-role">Технический архитектор</p>
+                            <p class="dev-bio">Backend-разработчик и архитектор Electron-приложений с опытом в создании кроссплатформенных решений.</p>
+                            <div class="dev-socials">
+                                <a href="https://discord.gg/BQ5MPYJ3jY" class="social-link">Discord</a>
+                                <!-- <a href="#" class="social-link">Telegram</a> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="developer-card">
+                        <div class="dev-avatar">
+                            <img src="img/avatars/3.jpg" alt="Разработчик 3">
+                            <div class="avatar-glitch"></div>
+                        </div>
+                        <div class="dev-info">
+                            <h3 class="dev-name">Миторин Александр</h3>
+                            <p class="dev-role">UI дизайнер</p>
+                            <p class="dev-bio">Дизайнер с страстью к аниме и ретро-эстетике. Создает уникальные интерфейсы, вдохновленные японской культурой.</p>
+                            <div class="dev-socials">
+                                <a href="#" class="social-link">Отказался</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">SloNick</div>
+            <div class="footer-copyright">© 2025 SloNick. Все права защищены.</div>
+            <div class="footer-links">
+                <a href="#">Политика конфиденциальности</a>
+                <a href="#">Условия использования</a>
+                <a href="#">Контакты</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html> 
